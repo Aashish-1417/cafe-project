@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+:root {
+    --primary: #ab5522;
+    --cta-color: #f44013;
+    --secondary: #f58840;
+    --text-black: rgba(0, 0, 0, .8);
+}
+
+
+/* global css starts */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    width: fit-content;
+    margin: auto;
+    color: #433;
+    text-transform: uppercase;
+    padding: 2.5rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.last-btn-div {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+.last-btn-div .btn {
+    background-color: var(--primary);
+    width: 18rem;
+}
+
+.btn {
+    width: 15rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: white;
+    background-color: var(--cta-color);
+}
+
+.btn:hover {
+    letter-spacing: 3px;
+}
+
+
+/* global css ends */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    color: var(--primary);
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+    /* color: #010103; */
+    color: var(--text-black);
+}
+
+.header .navbar a:hover {
+    border-bottom: 1px solid #443;
+    padding-bottom: 5px;
+    color: var(--primary);
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: var(--primary);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* home css starts */
+
+.home {
+    min-height: 100vh;
+    padding-top: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+}
+
+.home .row .content {
+    flex-basis: 50%;
+}
+
+.home .row .content p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-black);
+    text-align: center;
+}
+
+.home .row .image {
+    flex-basis: 50%;
+    height: 45rem;
+}
+
+.home h3 {
+    font-size: 6rem;
+    color: #433;
+    text-transform: uppercase;
+    line-height: 6.5rem;
+}
+
+
+/* home css ends */
+
+
+/* booking sectin css starts */
+
+.booking-section {
+    margin: 3rem;
+}
+
+.booking {
+    padding: 0;
+}
+
+.booking-section .heading {
+    margin: 0 auto .3rem auto;
+    padding: 0;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+}
+
+.booking-section .info-msg {
+    text-align: center;
+    color: var(--text-black);
+}
+
+.booking-section .booking-title {
+    margin-bottom: 3rem;
+}
+
+.booking-section .heading::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .4rem;
+    background-color: #da1212;
+}
+
+.booking-section form {
+    display: flex;
+    height: auto;
+    gap: 3rem;
+}
+
+.booking-section .form-div {
+    flex-basis: 24.5%;
+    height: 5rem;
+    overflow: hidden;
+    color: var(--text-black);
+}
+
+.booking-section form input {
+    width: 100%;
+    text-align: center;
+    height: 5rem;
+    background-color: #eee;
+}
+
+.booking-section .form-div select {
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+}
+
+.booking-section .btn-div {
+    flex-basis: 18%;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-section .btn {
+    min-width: 20rem;
+    height: 5rem;
+    flex-shrink: 1;
+}
+
+@media(max-width:600px) {
+    .booking {
+        padding: 0 9%;
+    }
+    .booking-section form {
+        flex-direction: column;
+        padding: 0 9%;
+    }
+    .booking-section form .btn {
+        width: 85%;
+    }
+    .booking-section .form-div {
+        height: 4rem;
+    }
+    .booking-section .form-div select {
+        height: 4rem;
+        text-align: center;
+    }
+    .booking-section .form-div input {
+        height: 4rem;
+    }
+    .booking-section .btn {
+        height: 4rem;
+    }
+}
+
+@media(min-width:600px) and (max-width:750px) {
+    section {
+        padding: 0 0;
+    }
+    .booking-section {
+        margin: 0;
+    }
+    .booking {
+        padding: 2rem 3%;
+    }
+    .booking-section form .form-div select,
+    input {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+    }
+    .booking-section form .btn {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+    }
+}
+
+.combos-offer {
+    padding: 0 0 2rem 0;
+    padding: 2rem 9%;
+}
+
+.combos-list {
+    border-right: 2px solid orangered;
+}
+
+.combos-offer .heading {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.combos-offer .combos-offer-container {
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    padding: 0 0 0 .2rem;
+}
+
+.combos-offer .combo-container .combos-list {
+    padding: 2rem 9%;
+}
+
+.combos-offer .combo-container,
+.offer-container {
+    flex-basis: 50%;
+}
+
+.offer-container .offer-img {
+    height: 42.5rem;
+    margin: 2rem 9%;
+}
+
+.offer-img img {
+    object-fit: contain;
+}
+
+.combos-offer .combo-container ul li {
+    width: 100%;
+    height: 8.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    gap: 3rem;
+    color: var(--text-black);
+}
+
+.combos-offer .combo-container ul li .btn,
+li img {
+    display: none;
+}
+
+.combos-offer .combo-container ul li .combo-img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.combo-side .offer-img .heading {
+    padding: 0;
+    font-size: 2rem;
+}
+
+.combo-side>.last-btn-div .btn {
+    width: 25rem;
+    height: 4.5rem;
+}
+
+.combos-offer .combo-container .name {
+    width: fit-content;
+}
+
+@media(min-width:1045px) and (max-width:1135px) {
+    .combos-offer .combo-container .name {
+        font-size: 1.3rem;
+    }
+    .combos-offer .combo-container ul li {
+        width: 100%;
+        height: 8.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        gap: 2rem;
+        color: var(--text-black);
+    }
+    .offer-container .offer-img img {
+        object-fit: contain;
+    }
+    .offer-container .offer-img {
+        height: 42.5rem;
+        margin: 2rem 9%;
+    }
+    .combos-offer .combo-container,
+    .offer-container {
+        flex-basis: 50%;
+    }
+}
+
+@media(min-width:600px) and (max-width:1050px) {
+    .combos-offer .combo-container .btn {
+        width: 13rem;
+    }
+}
+
+@media(min-width:600px) and (max-width:1150px) {
+    .offer-container .offer-img img {
+        object-fit: contain;
+    }
+}
+
+@media(min-width:600px) and (max-width:768px) {
+    .combos-offer .combo-container ul li {
+        font-size: 1.7rem;
+        gap: 5rem;
+    }
+    .combo-container li {
+        padding: 0;
+        border: 1px solid salmon;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+    .combo-container .combos-list {
+        padding: 0;
+    }
+    .combos-offer-container {
+        flex-direction: column;
+    }
+    .offer-container {
+        display: none;
+    }
+    .combos-offer-container .heading {
+        text-align: center;
+    }
+    .combos-offer .combo-container .combos-list {
+        padding: 0;
+    }
+}
+
+.combo-item-img {
+    width: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.combo-item-img-name {
+    display: inline-block;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.combo-item-name {
+    display: inline-block;
+    width: fit-content;
+}
+
+
+/* product item css starts */
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 5rem;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.item-container .single-item {
+    flex-basis: 29%;
+    height: auto;
+    box-shadow: 0 0 .1rem .1rem #efefef;
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.item-container .single-item:hover {
+    box-shadow: 0 0 .2rem .3rem #efefef;
+}
+
+.item-container .single-item .details {
+    font-size: 1.4rem;
+    padding: .5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: #010203;
+}
+
+.item-container .single-item figure {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.item-container .single-item .price-action .price span {
+    text-decoration: line-through;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.price-action {
+    margin-top: .7rem;
+    display: flex;
+    gap: 4rem;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.item-container .single-item .price-action .price {
+    width: fit-content;
+}
+
+.price-action .btn {
+    width: 9rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+.item-container .price-action .btn:hover {
+    letter-spacing: 0;
+}
+
+.menu-section .last-btn-div {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+
+/* product item css ends */
+
+
+/* gallery section css starts */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+
+.gallery-container figure {
+    flex-basis: 29%;
+}
+
+
+/* gallery section css ends */
+
+.contact .row {
+    display: flex;
+    background: #443;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+    column-gap: 2rem;
+}
+
+.contact .row .map {
+    flex-basis: 50%;
+    /* flex: 1 1 45rem; */
+    /* width: 100%; */
+    /* object-fit: cover; */
+}
+
+.contact .row form {
+    flex-basis: 50%;
+    /* flex: 1 1 45rem; */
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: 1px solid white;
+}
+
+.contact .row form .inputBox span {
+    color: white;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: white;
+    text-transform: none;
+    background: none;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer-container .heading {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+}
+
+.footer-container .main-content {
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+.footer-first-col,
+.footer-sec-col,
+.footer-third-col {
+    flex-basis: 30%;
+    padding: 0 2rem;
+    letter-spacing: .1rem;
+}
+
+.footer-container .footer-first-col i {
+    font-size: 2.5rem;
+    color: black;
+    line-height: 5rem;
+}
+
+.footer-container .footer-first-col .footer-social-icons a {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 1rem;
+}
+
+.footer-first-col .about-text {
+    line-height: 2.5rem;
+}
+
+.footer-sec-col ul li {
+    margin: .5rem 0;
+}
+
+.footer-sec-col ul li a {
+    color: white;
+    padding: .5rem;
+}
+
+.footer-sec-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-third-col i {
+    margin-right: 1rem;
+}
+
+.footer-third-col .email .mail {
+    text-transform: lowercase;
+}
+
+.footer-contacts div {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contacts div i {
+    font-size: 1.8rem;
+}
+
+footer .copyright {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+
+/* footer section css ends */
+
+
+/* media query starts */
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .home .row .image img {
+        height: auto;
+        width: 100%;
+    }
+    .home h3 {
+        font-size: 3rem;
+        border: 1px solid black;
+    }
+}
+
+@media(max-width:600px) {}
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .home h3 {
+        font-size: 5rem;
+    }
+}
+
+@media(max-width:768px) {
+    .home h3 {
+        line-height: 4rem;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .heading span {
+        font-size: 2.3rem;
+    }
+    #menu-btn {
+        display: initial;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+    .header .navbar li {
+        display: block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar a {
+        display: block;
+        font-size: 2.2rem;
+        margin: 0;
+        padding: 1.5rem 2rem;
+    }
+    .home {
+        text-align: center;
+    }
+    .home .row .content h3 {
+        /* font-size: 4rem; */
+    }
+    .footer-container .main-content {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .home .row .image img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .home .content h3 {
+        font-size: 4rem;
+        /* font-size: 2rem; */
+    }
+}
+
+
+/* media query ends */
